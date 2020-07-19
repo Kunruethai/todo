@@ -17,6 +17,14 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+//Route::get("/", "HomeController@index");
+//Route::get("/contact", "HomeController@contact");
+//Route::get("/about", "HomeController@about");
+
+
 Route::get("/", "HomeController@index");
-Route::get("/contact", "HomeController@contact");
-Route::get("/about", "HomeController@about");
+Route::get("/login", "HomeController@login");
+Route::get("/create", "HomeController@create");
+
+Route::post('/store', 'HomeController@store');
+Route::get('/delete/{id}', 'HomeController@delete');
